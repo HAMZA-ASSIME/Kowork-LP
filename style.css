@@ -101,7 +101,7 @@ form{
 
 .services-section{
     height: 400px;
-    background-color: #1ABC9C;
+    background-color: var(--primary-color);
 }
 
 .service-decoration{
@@ -184,6 +184,147 @@ form{
 
 }
 
+.card{
+    width: 80%;
+    border: 3px solid var(--primary-color) !important;
+    border-radius: 15px !important;
+}
+
+.card-header{
+    background-color: var(--primary-color) !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    border-bottom-right-radius: 20px !important;
+    border-bottom-left-radius: 20px !important;
+    border-top-right-radius: 11px !important;
+    border-top-left-radius: 11px !important;
+    height: 70px;
+    font-size: 20px;
+}
+
+.price{
+    height: 45px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    font-size: 25px;
+    color: #172738;
+    font-weight: 700;
+}
+
+.description{
+    margin-top: 15px;
+}
+
+.card-decoration{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 95px;
+    width: 95px;
+    z-index: 0;
+    object-fit: cover;
+    border-bottom-right-radius: 11px;
+}
+
+.middle_card{
+    width: 80%;
+    border: 3px solid #172738 !important;
+    border-radius: 15px !important;
+}
+
+.midlle-card-header{
+    background-color: #172738 !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    border-bottom-right-radius: 20px !important;
+    border-bottom-left-radius: 20px !important;
+    border-top-right-radius: 11px !important;
+    border-top-left-radius: 11px !important;
+    height: 70px;
+    font-size: 20px;
+}
+
+.accordion-button{
+    background-color: #D9D9D9 !important;
+    border-radius: 12px !important;
+}
+
+.accordion-item{
+    border-style: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--primary-color) !important;
+  color: white !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  box-shadow: none !important;
+  transition: background-color 1000ms ease !important;
+}
+
+.accordion-collapse.collapse.show{
+    background-color: var(--primary-color) !important;
+    color: #ffffff;
+    border-bottom-left-radius: 12px !important;
+    border-bottom-right-radius: 12px !important;    transition: background-color 1000ms ease !important;
+}
+
+
+footer{
+    height: 300px;
+    background-color: var(--primary-color-dark);
+    margin: 0px !important;
+}
+
+.brand-footer{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 3px solid #1ABC9C;
+    background-color: #ffffff;
+}
+
+.title-footer{
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+footer .location{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+footer a{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 400;
+    line-height: 1px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 768px){
+    .insta-div{
+        margin-right: 116px;
+    }
+
+    .location-column{
+        padding-top: 50px;
+        padding-left: 80px !important;
+    }
+
+    .contact-us-column{
+        padding-top: 50px;
+        padding-left: 40px !important;
+    }
+
+    .footer-logo-img{
+        padding-left: 40px !important;
+    }
+}
+
 @media (max-width: 767px) {
     .short-presentation .text{
         width: 100%;
@@ -225,7 +366,7 @@ form{
 
     .services-section{
         height: auto;
-        background-color: #1ABC9C;
+        background-color: var(--primary-color);
     }
 
     .service-decoration{
@@ -255,6 +396,34 @@ form{
     .social_media_text{
         margin-left: 12px;
     }
+
+    .pricing_col {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px !important;
+    }
+
+    #wave{
+        display: none;
+    }
+
+    footer{
+        margin-top: 40px !important;
+        padding: 20px;
+        height: auto !important;
+    }
+
+    footer a{
+        align-items: center;
+    }
+
+    .location-column{
+        padding-top: 20px;
+    }
+
+    .contact-us-column{
+        padding-top: 20px;
+    }
 }
 
 
@@ -273,7 +442,7 @@ form{
   transform: translate(-50%, -50%);
   font-size: 30px;
   color: white;
-  background-color: #1ABC9C;
+  background-color: var(--primary-color);
   width: 60px;
   height: 60px;
   border-radius: 50%;

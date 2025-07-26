@@ -13,6 +13,14 @@ videoModal.addEventListener('hidden.bs.modal', () => {
 });
 
 
-setTimeout(function() {
-    window.location.href = "https://www.youtube.com/shorts/8niR94PulFE"; // Replace with your target URL
-  }, 3000);
+// Send email function
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_hcjdcjn', 'template_503ferg', this)
+      .then(function() {
+        alert('Message sent!');
+      }, function(error) {
+        alert('Failed to send: ' + JSON.stringify(error));
+      });
+  });
