@@ -12,6 +12,19 @@ videoModal.addEventListener('hidden.bs.modal', () => {
     console.log('close');
 });
 
+// social media links
+document.querySelector('.yt_text').addEventListener('click',function(){
+    window.open('https://www.youtube.com/@kowork1683', '_blank');
+});
+document.querySelector('.in_text').addEventListener('click',function(){
+    window.open('https://www.linkedin.com/company/koworkafrica', '_blank');
+});
+document.querySelector('.insta_text').addEventListener('click',function(){
+    window.open('https://www.instagram.com/kowork_africa', '_blank');
+});
+document.querySelector('.fb_text').addEventListener('click',function(){
+    window.open('https://web.facebook.com/KoworkAfrica/?_rdc=1&_rdr', '_blank');
+});
 
 // Send email function
 document.getElementById("contact-form").addEventListener("submit", function(e) {

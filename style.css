@@ -3,6 +3,45 @@
   --primary-color-dark: #1ABC9C;
 }
 
+.middle_card::selection {
+  background-color: #172738 !important;
+  color: #ffffff !important;
+}
+
+body::selection {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+#pricing-section .card-header::selection{
+    background-color: #ffffff;
+    color: var(--primary-color);
+}
+
+#pricing-section .midlle-card-header::selection{
+    background-color: #ffffff;
+    color: #172738;
+}
+
+.infos_card::selection{
+    background-color: #ffffff;
+    color: var(--primary-color);
+}
+
+footer::selection{
+    background-color: #ffffff;
+    color: var(--primary-color-dark);
+}
+
+.services-section .title::selection{
+    background-color: #ffffff;
+    color: var(--primary-color-dark);
+}
+
+.social_media_text:hover{
+    cursor: pointer;
+}
+
 .brand-logo{
     height: 74px;
     width: 74px;
@@ -19,6 +58,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed;
 }
 
 .title{
@@ -62,11 +102,37 @@ form{
 .submit-btn{
     background-color: var(--primary-color) !important;
     color: #ffffff !important;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.3s ease;
+
 }
 
-.submit-btn:hover{
-    background-color: var(--primary-color-dark) !important;
+/* hover animation */
+/* Crée l'effet de remplissage à gauche */
+.submit-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--primary-color-dark);
+  z-index: -1;
+  transition: width 0.4s ease;
 }
+
+/* Quand on survole : on remplit de gauche à droite */
+.submit-btn:hover::before {
+  width: 100%;
+}
+
+/* On change aussi la couleur du texte si nécessaire */
+.submit-btn:hover {
+  color: #fff !important;
+}
+
 
 .quote{
     color: var(--primary-color-dark);
@@ -490,4 +556,10 @@ footer a{
     transform: translate(-50%, -50%) scale(2.5);
     opacity: 0;
   }
+}
+
+/* Hover */
+.form-control:focus{
+    box-shadow: 0 4px 10px rgba(26, 188, 156, 0.5) !important;
+    border-color: var(--primary-color-dark) !important;
 }
